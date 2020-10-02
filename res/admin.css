@@ -1,0 +1,78 @@
+img { 
+  height: 2em;
+}
+
+form {
+  margin-bottom: 3em;
+}
+
+* { 
+  text-align: center; 
+}
+
+body, a, input[type="submit"] { 
+  font-family: 'Courier New', Courier, monospace; 
+  color: white;
+  background-color: #1f2e72;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+td {
+  border: 0.1em solid white;
+  padding: 0.5em;
+}
+
+textarea {
+  width: 40%;
+  height: 17em;
+}
+
+input[type="submit"] {
+  border-radius: 3px;
+  border: 0.1em white solid;
+
+}
+
+@media (orientation: portrait) {
+  body {
+    font-size: 2.6em;
+    max-width: 100%;
+  }
+
+  input {
+    font-size: 1.25em;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  table td {
+    font-size: 0.5em;
+  }
+
+  form {
+    max-width: 50em;
+  }
+
+  input, select {
+    margin: 0.5em auto;
+  }
+
+  input[type="checkbox"] {
+    transform: scale(4);
+    margin: 0.5em;
+  }
+
+  select {
+    transform: scale(3);
+  }
+
+  input[type="submit"], a {
+    font-size: 2em;
+  }
+}

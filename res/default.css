@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+
+/* COMMUN */
+
+body {
+    background-color: gainsboro;
+    margin : 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    padding-bottom: 1.15rem;
+}
+
+a {
+    text-decoration: none;
+    color: #005bb0;
+}
+
+.error, .good, .button {
+    color: white;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    font-weight: normal;
+    display: inline-block;
+    border-width: 0;
+}
+
+.error {
+    background-color: red;
+}
+
+.good {
+    background-color: green;
+}
+
+.button {
+    background-color: #06123a;
+    transition-duration: 0.15s;
+}
+
+.error a, .good a, .button a {
+    color: white;
+}
+
+.button:hover, label {
+    cursor: pointer;
+}
+
+.button:active {
+    transform: translate(0.1em, 0.1em);
+    transition-duration: 0.1s;
+}
+
+.material-icons {
+    vertical-align: middle;
+    margin-top: -0.15em;
+}
+
+.premiumColor {
+    color: #6d071a!important;
+}
+
+.premiumBackground {
+    background-color: #6d071a!important;
+}
+
+header {
+    background-color: #06123a;
+    padding-bottom: 0.5em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    text-align : left;
+    padding: 1em 0 0.5em 1.5em;
+    margin : 0;
+    height: 1em;
+}
+
+h1 a {
+    color : white;
+}
+
+h1 .logoIcon {
+    font-size: 1.5em;
+}
+
+h1 .menuIcon {
+    display: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+#headerTable {
+    color : white;
+    text-align: center;
+    height: 20px; 
+    width: 100%;
+    margin : 0px;
+    outline: 15px;
+}
+
+.headerButton {
+    border-left-color: white;
+    border-left: 2px solid;
+    padding: 0.5em;
+    cursor: pointer;
+    width: 25%;
+}
+
+.headerButton:first-child {
+    border-left: 0px solid;
+}
+
+.headerButton a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 100%;
+}
+
+nav {
+    float: left;
+    height: 100%;
+    background-color: #06123a;
+    width: 25%;
+    box-shadow: 3px 3px 5px 0px rgb(0, 0, 0, 0.5);
+    border-bottom-right-radius: 1.5em;
+    position: fixed;
+    top: 7.9em;
+    z-index: 3;
+}
+
+nav table {
+    width: 100%;
+}
+
+nav td {
+    height: 2.25em;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+nav tr:first-child td {
+    color: #06123a;
+    background-color: white;
+    border-left-color: white;
+    height: 2.5em;
+    font-size: 1.25em;
+    cursor: default;
+}
+
+nav .material-icons {
+    float: right;
+}
+
+.mySelection, .gameSelected {
+    color: white;
+    background-color: #06123a;
+    border-width: 0;
+}
+
+.mySelection td {
+    font-style: italic;
+    cursor: default;
+}
+
+.gameSelected:hover {
+    background-color: white;
+    color: #06123a;
+    transition: 0.5s;
+}
+
+.gameSelected .premiumColor {
+    color: white!important;
+}
+
+.gameSelected .premiumColor:hover {
+    color: #6d071a!important;
+}
+
+/* Eléments centraux */
+
+h2 {
+    text-align: center;
+    font-weight: normal;
+    padding: 0.75em 0;
+    background-color: white;
+    font-size: 1.25rem;
+    color: #06123a;
+    width: 75%;
+    margin: 0 0 0 25%;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0, 0.5);
+    z-index: 3;
+}
+
+h2:first-of-type, h2.selectionTitle:first-of-type {
+    margin-top: 6.3em;
+}
+
+h2 i {
+    vertical-align: bottom;
+    cursor: pointer;
+}
+
+.centralSection {
+    width: 60%;
+    margin: 3em auto 2em 30.5%;
+    background-color: white;
+    text-align: center;
+    padding: 2em;
+    box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    position: relative;
+}
+
+.centralSection:last-of-type {
+    margin-bottom: 3.5em;
+}
+
+/* INDEX */
+
+.tableHomepage { 
+    text-align: center; 
+    margin: auto;
+}
+
+.tableHomepage tr * {
+    padding:  0.75em;
+}
+
+.tableHomepage th {
+    font-size: 1.15em;
+    color: #06123a;
+}
+
+.match { 
+    border-top: solid black 0.1em;
+    font-size: 1em;
+} 
+
+.match td:nth-child(2) {
+    font-style: italic;
+}
+
+.match .menuIcon {
+    color: #06123a;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* PAGE MATCH */
+
+em {
+    text-align: center;
+    color: #06123a;
+}
+
+#teamsTable {
+    margin : auto;
+    text-align: center;
+}
+
+.caseTeam {
+    font-size: 1.5em;
+}
+
+.caseTeam img {
+    height: 4em;
+    max-width: 5em;
+}
+
+#gameDetails.caseTeam {
+    padding: 0 2.5em;
+}
+
+#adviceTable {
+    margin: auto;
+}
+
+#adviceTable td {
+    width: 50%;
+    padding: 1em 1em 0 1em;
+    text-align: justify;
+    vertical-align: top;
+}
+
+#adviceTable ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+#adviceTable li {
+    padding: 0.25em 0;
+}
+
+.votesChart {
+    width: 75%;
+    margin: auto;
+    margin-bottom: 1em;
+    border-radius: 5px;
+}
+
+.votesChart td {
+    width: 25%;
+    padding: 0.5em;
+}
+
+.votesChart td:nth-child(1), .votesChart td:nth-child(3) {
+    background-color: #002c72;
+    color: white;
+}
+
+/* SELECTION PARIEURS */
+
+h2.selectionTitle {
+    margin-left: 35.5%;
+    width: 55%;
+}
+
+.tableSelection {
+    text-align: center;
+    margin: auto;
+}
+
+.tableSelection td {
+    padding: 0.5em 1em;
+}
+
+.tableSelection a {
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.votesTable {
+    margin: auto;
+}
+
+/* PAGE Codes promo */
+
+.caseLogo img {
+    
+    margin: auto;
+    width: 10em;
+	height: 4em;
+}
+
+.caseLogo {
+    margin:auto;
+    text-align: center;
+}
+
+/* Pages login et membres */
+
+.formTable {
+    width: 100%;
+}
+
+.formTable td {
+    width: 50%;
+    font-size: 1em;
+}
+
+.formTable h3 {
+    font-size: 1.1em;
+    color: #06123a;
+    font-weight: normal;
+}
+
+.formTable form {
+    margin-top: 2em;
+}
+
+.formTable input {
+    margin-bottom: 1.25em;
+    font-size: 0.9em;
+}
+
+.formTable input#over18 {
+    margin-bottom: 0;
+}
+
+label[for="over18"] {
+    margin-bottom: 1.25em;
+    display: inline-block;
+}
+
+/* Footer */
+
+footer {
+    width: 72%;
+    margin-left: 25%;
+    background-color: #f2f2f2;
+    position: fixed;
+    bottom: 0;
+    padding: 0.75em 2em;
+    text-align: center;
+    margin-top: 4em;
+    font-size: 0.75em;
+    z-index: 2;
+}
+
+@media (orientation: portrait) {
+    body {
+        font-size: 2.6em;
+        background-size: 166rem 100rem;
+        background-position: -20.5em 7.9em;
+    }
+
+    .material-icons {
+        font-size: 1.25em;
+    }
+
+    h1 .menuIcon {
+        display: inline-block;
+        color: white;
+        font-size: 1em;
+        margin-left: -0.5em;
+        vertical-align: middle;
+        margin-right: 0.5em;
+        margin-top: -0.2em;
+        cursor: pointer;
+    }
+
+    nav {
+        display: none;
+        width: 85%;
+        position: fixed;
+        top: 30rem;
+    }
+
+    h2:first-of-type, h2.selectionTitle:first-of-type {
+        margin-top: 30rem;
+    }
+
+    h2, h2.selectionTitle {
+        width: 100%;
+        margin-left: 0;
+        padding: 0.5em 0;
+        margin-bottom: -1.5em;
+        font-size:  3.5rem;
+    }
+
+    .centralSection {
+        width: 95.8%;
+        margin-left: 0;
+        padding: 0.5em 0.55em;
+    }
+
+    .centralSection.indexSection tr * {
+        padding: 0;
+    }
+
+    .match { 
+        border-top: 0;
+    } 
+
+    .match td {
+        padding: 0.5em 0!important;
+    }
+
+    .caseTeam img {
+        height: 2.3em;
+        max-width: 3em;
+    }
+
+    #teamsTable, #adviceTable {
+        width: 92%;
+    }
+
+    #teamsTable {
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+    }
+
+    #adviceTable td {
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
+
+    .votesTable td {
+        width: 100%;
+        display: block;
+        padding: 0;
+        margin: 1.5em auto;
+    }
+
+    .formTable tr td {
+        display: block;
+        font-size: 1.24em;
+        width: 100%;
+    }
+
+    input[type="checkbox"] {
+        transform: scale(2);
+        -webkit-transform: scale(2);
+    }
+
+    footer {
+        margin-left: 0;
+        width: 88.8%;
+    }
+}
